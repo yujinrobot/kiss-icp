@@ -20,8 +20,12 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-add_library(metrics STATIC)
+add_library(metrics SHARED)
 add_library(kiss_icp::metrics ALIAS metrics)
 target_sources(metrics PRIVATE Metrics.cpp)
 target_link_libraries(metrics PUBLIC Eigen3::Eigen)
 set_global_target_properties(metrics)
+
+
+install( TARGETS metrics DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install( FILES Metrics.hpp DESTINATION ${CMAKE_INSTALL_PREFIX}/include/kiss_icp )

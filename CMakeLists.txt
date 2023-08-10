@@ -20,12 +20,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-add_library(core SHARED)
-add_library(kiss_icp::core ALIAS core)
-target_sources(core PRIVATE Registration.cpp Deskew.cpp VoxelHashMap.cpp Preprocessing.cpp Threshold.cpp)
-target_link_libraries(core PUBLIC Eigen3::Eigen tsl::robin_map TBB::tbb Sophus::Sophus)
-set_global_target_properties(core)
+cmake_minimum_required(VERSION 3.16...3.26)
+project(kiss_icp)
 
-
-install( TARGETS core DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-install( FILES Registration.hpp Deskew.hpp VoxelHashMap.hpp Preprocessing.hpp Threshold.hpp DESTINATION ${CMAKE_INSTALL_PREFIX}/include/kiss_icp/core )
+add_subdirectory(cpp/kiss_icp)
