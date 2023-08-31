@@ -28,4 +28,4 @@ target_link_libraries(pipeline PUBLIC kiss_icp::core)
 set_global_target_properties(pipeline)
 
 install( TARGETS pipeline DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-install( FILES KissICP.hpp DESTINATION ${CMAKE_INSTALL_PREFIX}/include/kiss-icp )
+install( FILES KissICP.hpp DESTINATION ${CMAKE_INSTALL_PREFIX}/include/kiss_icp )
