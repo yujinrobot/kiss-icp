@@ -27,5 +27,5 @@ target_link_libraries(core PUBLIC Eigen3::Eigen tsl::robin_map TBB::tbb Sophus::
 set_global_target_properties(core)
 
 
-install( TARGETS core DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-install( FILES Registration.hpp Deskew.hpp VoxelHashMap.hpp Preprocessing.hpp Threshold.hpp DESTINATION ${CMAKE_INSTALL_PREFIX}/include/kiss_icp/core )
+install( TARGETS core DESTINATION lib)
+install( FILES Registration.hpp Deskew.hpp VoxelHashMap.hpp Preprocessing.hpp Threshold.hpp DESTINATION include/kiss_icp/core )
