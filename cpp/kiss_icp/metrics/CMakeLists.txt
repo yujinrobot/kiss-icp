@@ -27,5 +27,5 @@ target_link_libraries(metrics PUBLIC Eigen3::Eigen)
 set_global_target_properties(metrics)
 
 
-install( TARGETS metrics DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-install( FILES Metrics.hpp DESTINATION ${CMAKE_INSTALL_PREFIX}/include/kiss_icp )
+install( TARGETS metrics DESTINATION lib)
+install( FILES Metrics.hpp DESTINATION include/kiss_icp )
